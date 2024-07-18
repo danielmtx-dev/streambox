@@ -6,11 +6,14 @@ workflows:
         ANDROID_HOME: /opt/android-sdk-linux
         GRADLE_USER_HOME: /root/.gradle
     scripts:
-      - name: Check Android SDK installation
+      - name: Set up Android SDK
         script: |
-          export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
-          echo "SDK Manager version:"
-          sdkmanager --version || echo "SDK Manager not found"
+          export PATH=$ANDROID_HOME/tools/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
+          yes | sdkmanager --licenses
+          yes | sdkmanager "platforms;android-30" "build-tools;30.0.3"
+      - name: Grant execute permissions to gradlew
+        script: |
+          chmod +x ./gradlew
       - name: Build the Android app
         script: |
           ./gradlew assembleRelease
