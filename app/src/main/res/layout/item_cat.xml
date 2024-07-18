@@ -1,0 +1,26 @@
+<RelativeLayout
+    android:id="@+id/rl_cat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3sdp"
+    android:background="@drawable/focused_episodes"
+    android:focusable="true"
+    android:focusableInTouchMode="false">
+
+    <TextView
+        android:id="@+id/tv_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:lines="1"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_1sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    android:id="@+id/rl_season"
+    android:background="@drawable/focused_episodes"
+    android:focusable="true"
+    android:focusableInTouchMode="false">
+
+    <TextView
+        android:id="@+id/tv_season_name"
+        android:text="Season"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="?attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

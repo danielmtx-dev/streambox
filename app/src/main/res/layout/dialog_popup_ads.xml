@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_25sdp">
+
+    <LinearLayout
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_1sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_ads_click"
+                app:tint="@color/md_classic_background_tint" />
+
+            <TextView
+                android:id="@+id/tv_ads_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_9sdp"
+                android:text="Ads"
+                android:textColor="@color/md_classic_background_tint"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                android:lines="1"/>
+
+            <ImageView
+                android:id="@+id/iv_close_ads"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_close"
+                app:tint="@color/md_classic_background_tint"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_img_selector"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp">
+
+            <ImageView
+                android:id="@+id/iv_ads"
+                android:src="@drawable/material_design_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"/>
+
+            <TextView
+                android:background="@color/color_select"
+                android:textColor="@color/white"
+                android:text="AD"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.nemosofts.view.SmoothProgressBar
+                android:visibility="gone"
+                android:id="@+id/pb_ads"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                app:cpb_color="#FFee44"
+                app:cpb_colors="@array/progress_colors"
+                app:cpb_max_sweep_angle="300"
+                app:cpb_min_sweep_angle="10"
+                app:cpb_rotation_speed="1.0"
+                app:cpb_stroke_width="@dimen/_2sdp"
+                app:cpb_sweep_speed="1.0" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/tv_btn_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="OPEN"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/bg_btn_submit"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

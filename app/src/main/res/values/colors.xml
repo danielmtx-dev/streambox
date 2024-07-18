@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Classic Color-->
+    <color name="md_classic_accent">#E62E2F</color>
+    <color name="md_classic_accent_50">#26E62E2F</color>
+    <color name="md_classic_background">#FDFDFE</color>
+    <color name="md_classic_background_s">#ECECEC</color>
+    <color name="md_classic_title">#161616</color>
+    <color name="md_classic_sub_title">#6D6D6D</color>
+    <color name="md_classic_border">#1A0C1318</color>
+    <color name="md_classic_background_tint">#000000</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="color_select">#FF9F00</color>
+
+    <color name="pb_color_home">#FF9F00</color>
+    <color name="bg_color_load">#212121</color>
+
+</resources>

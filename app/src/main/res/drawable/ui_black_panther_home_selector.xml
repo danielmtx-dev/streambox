@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ui_black_panther_home_selector_bar" android:state_focused="true"/>
+    <item android:drawable="@drawable/focused_none"/>
+</selector>

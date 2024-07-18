@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:keepScreenOn="true">
+
+    <nemosofts.streambox.Util.player.CustomPlayerView
+        android:id="@+id/nSoftsPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:controller_layout_id="@layout/custom_controls_live"
+        android:animateLayoutChanges="true"
+        app:surface_type="texture_view"/>
+
+    <androidx.nemosofts.view.SmoothProgressBar
+        android:id="@+id/pb_player"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:cpb_color="#FFee44"
+        app:cpb_colors="@array/progress_colors"
+        app:cpb_max_sweep_angle="300"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_stroke_width="@dimen/_2sdp"
+        app:cpb_sweep_speed="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_reset"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerInParent="true"
+        android:alpha="0.8"
+        android:background="@drawable/bg_btn_play_selector"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:src="@drawable/ic_reset"
+        app:tint="@color/white"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="@string/try_again"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rl_data"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@drawable/bg_player_list"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <RelativeLayout
+            android:id="@+id/rl_player_list_top"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_playlist"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/more_list"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_close_player_list"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_arrow_down"
+                app:tint="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/bg_btn_player_selector"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/rl_player_list_top"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:scrollbarSize="5dp"
+            android:scrollbarThumbVertical="@drawable/scrollbar"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
