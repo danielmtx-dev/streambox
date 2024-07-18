@@ -1,0 +1,17 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    environment:
+      vars:
+        ANDROID_HOME: /opt/android-sdk-linux
+        GRADLE_USER_HOME: /root/.gradle
+    scripts:
+      - name: Set up Android SDK
+        script: |
+          yes | sdkmanager "platforms;android-30"
+          yes | sdkmanager "build-tools;30.0.3"
+      - name: Build the Android app
+        script: |
+          ./gradlew assembleRelease
+    artifacts:
+      - build/app/outputs/apk/release/app-release.apk
